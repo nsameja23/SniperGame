@@ -7,7 +7,7 @@ public class BulletController : MonoBehaviour
     public float speed;
     public float bulletLife;
 
-    // Use this for initializations
+    // Use this for initializationssss
     void Start()
     {
         bulletLife = 2.0f;
