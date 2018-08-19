@@ -48,8 +48,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        //moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
-        //moveVelocity = moveInput * moveSpeed;
+        moveInput = new Vector3(Input.GetAxisRaw("Horizontal"), 0f, 0f);
+        moveVelocity = moveInput * moveSpeed;
 
         Ray cameraRay = mainCamera.ScreenPointToRay(Input.mousePosition);
         Plane groundPlane = new Plane(Vector3.up, Vector3.zero);
