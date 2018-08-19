@@ -3,7 +3,17 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - RedVIP
+  - BlueVIP
+  - QuitButton
+  - HowToPlayButton
+  - LeaderboardButton
+  - StartButton
+  - GameManager
+  - RedVIP_HealthBar
+  - BlueVIP_HealthBar
+  - AdjustableHealthBar
   layers:
   - Default
   - TransparentFX
