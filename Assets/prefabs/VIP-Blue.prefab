@@ -226,6 +226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f68037c172928f46b70b135ed99b291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vipTeamColor: Blue
 --- !u!114 &114736354749050296
 MonoBehaviour:
   m_ObjectHideFlags: 1

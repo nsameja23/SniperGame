@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class VIPMovement : MonoBehaviour
 {
+    public string vipTeamColor;
 
     // Use this for initialization
     void Start()
@@ -16,4 +17,21 @@ public class VIPMovement : MonoBehaviour
     {
 
     }
+
+    #region Accessors
+
+    public string VIPTeam
+    {
+        get
+        {
+            return vipTeamColor;
+        }
+
+        set
+        {
+            vipTeamColor = value;
+        }
+    }
+
+    #endregion
 }

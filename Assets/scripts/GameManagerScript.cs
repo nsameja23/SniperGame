@@ -22,6 +22,10 @@ public class GameManagerScript : MonoBehaviour
     public GameObject blueVIP;
     public GameObject redVIP;
 
+    //Winner variables
+    public string winningTeam;
+    public bool isWinnerFound;
+
     private static bool isCreated = false;
 
     void Awake()
@@ -30,6 +34,8 @@ public class GameManagerScript : MonoBehaviour
         {
             DontDestroyOnLoad(this.gameObject);
             isCreated = true;
+            isWinnerFound = false;
+            winningTeam = "";
             Debug.Log("Awake: " + this.gameObject);
         }
     }
@@ -54,6 +60,7 @@ public class GameManagerScript : MonoBehaviour
                 blueVIP = GameObject.FindGameObjectWithTag("BlueVIP");
                 redVIP = GameObject.FindGameObjectWithTag("RedVIP");
 
+                FindWinner();
                 break;
             case GameState.Pause:
                 break;
@@ -61,6 +68,27 @@ public class GameManagerScript : MonoBehaviour
                 break;
             case GameState.Quit_Game:
                 break;
+        }
+    }
+
+    void FindWinner()
+    {
+        if (blueVIP.GetComponent<VIPHealthBar>().VipHealth <= 0f)
+        {
+            winningTeam = redVIP.GetComponent<VIPMovement>().VIPTeam;
+            isWinnerFound = true;
+        }
+
+        if (redVIP.GetComponent<VIPHealthBar>().VipHealth <= 0f)
+        {
+            winningTeam = blueVIP.GetComponent<VIPMovement>().VIPTeam;
+            isWinnerFound = true;
+        }
+
+        if (isWinnerFound)
+        {
+            Debug.Log("Winning Team: " + winningTeam);
+            gameState = GameState.End_Game;
         }
     }
 

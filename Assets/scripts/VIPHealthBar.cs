@@ -45,4 +45,16 @@ public class VIPHealthBar : MonoBehaviour
     {
         healthbar.fillAmount = vipCurrentHealth / vipBaseHealth;
     }
+
+    #region Accessors
+
+    public float VipHealth
+    {
+        get
+        {
+            return vipCurrentHealth;
+        }
+    }
+
+    #endregion
 }

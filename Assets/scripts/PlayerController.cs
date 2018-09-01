@@ -60,8 +60,8 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 pointToLook = cameraRay.GetPoint(rayLength);
             Debug.DrawLine(cameraRay.origin, pointToLook, Color.green);
-            Debug.Log(" pointo " + pointToLook.z);
-            Debug.Log(" player " + transform.position.z);
+            //Debug.Log(" pointo " + pointToLook.z);
+            //Debug.Log(" player " + transform.position.z);
 
             currentPointToLookAt = pointToLook;
 
